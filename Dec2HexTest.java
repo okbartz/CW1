@@ -4,8 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 public class Dec2HexTest {
 	
-public Dec2HexTest()
-{}
+
     Dec2Hex dec2hex;
 
     @Before
