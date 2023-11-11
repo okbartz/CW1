@@ -2,22 +2,29 @@ import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 
 import org.junit.runner.notification.Failure;
-import java.lang.Exception;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class TestRunner {
     public static void main(String[] args) {
+
+        Logger logger
+                = Logger.getLogger(
+                TestRunner.class.getName());
+
         Result result = JUnitCore.runClasses(Dec2HexTest.class);
         int fails = 0;
         try {
             for (Failure failure : result.getFailures()) {
-                System.out.println(failure.toString());
+                logger.log(Level.WARNING,failure.toString());
                 fails++;
             }
             if (fails > 0)
                 throw new Exception();
-            System.out.println("all tests have passed: " + result.wasSuccessful());
+            logger.log(Level.INFO,"all tests have passed: {0} ", result.wasSuccessful());
         } catch (Exception e) {
-            System.out.println("" + fails + " tests failed");
+            logger.log(Level.WARNING,"{0} tests failed", fails);
             System.exit(1);
         }
         System.exit(0);
