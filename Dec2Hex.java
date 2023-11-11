@@ -1,4 +1,3 @@
-import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -15,7 +14,7 @@ class Dec2Hex
                 Dec2Hex.class.getName());
 
         try {
-            if (args[0].isEmpty() == false){
+            if (!args[0].isEmpty()){
                 Arg1 = Integer.parseInt(args[0]);
                 char[] ch = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
                 int rem;
@@ -30,7 +29,7 @@ class Dec2Hex
                     num = num / 16;
                 }
 
-                logger.log(Level.INFO,"Hexadecimal representation is: " + hexadecimal);
+                logger.log(Level.INFO,"Hexadecimal representation is: {0}", hexadecimal);
                 return hexadecimal;
             }
             else {
