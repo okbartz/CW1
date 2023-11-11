@@ -5,10 +5,6 @@ import static org.junit.Assert.assertEquals;
 public class Dec2HexTest {
 
 
-    private Dec2Hex dec2Hex = new Dec2Hex();
-
-
-
     @Test
     public void main() {
 
