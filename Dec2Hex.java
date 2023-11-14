@@ -1,7 +1,7 @@
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-//Bartlomiej Klich.
+//Bartlomiej Klich
 //14/11/2023
 
 class Dec2Hex
